@@ -10,7 +10,7 @@ app.use("/intranet-images", express.static("cityImages"));
 
 let port = process.env.PORT;
 if (port == null || port == "") {
-  port = 5000;
+  port = 5001;
 }
 
 app.get("/", (req, res) => {
