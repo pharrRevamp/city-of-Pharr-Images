@@ -2,11 +2,13 @@ const express = require("express");
 const cors = require("cors");
 require("dotenv").config();
 const app = express();
-
+const employeeData = require("./routes/employeeData");
 // middleware
 app.use(express.json());
 app.use(cors());
 app.use("/intranet-images", express.static("cityImages"));
+
+app.use("/", employeeData);
 
 let port = process.env.PORT;
 if (port == null || port == "") {
